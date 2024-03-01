@@ -58,7 +58,7 @@ async function getCountry(){
                     </ul>
                 </div>
                 <div class="border-country-btns">
-                    
+                    <h3>Border Countries:</h3>
                 </div>
             </div>
             `
