@@ -5,19 +5,14 @@
           box-sizing: border-box;
 }
 
-body {
-  background-color: rgb(5, 5, 24);
-  color: #fff;
-}
-
-.mode #navbar, .mode #hero {
+.mode #navbar, .mode {
   background-color: rgb(5, 5, 24);
   color: #fff;
 }
 
 .mode input, .mode select, .mode .country-card {
   background-color: rgb(8, 8, 33);
-  color: #fff;
+  color: #fff !important;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -143,6 +138,8 @@ body {
 #hero .countries-row .country-card {
   cursor: pointer;
   max-width: 400px;
+  color: rgb(8, 8, 23);
+  text-decoration: none;
   width: 100%;
   padding-bottom: 30px;
   margin-bottom: 30px;
@@ -191,11 +188,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 20px;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 #hero .pagination li {
-  background-color: gray;
-  width: 40px;
-  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,6 +208,22 @@ body {
 #hero .pagination li button {
   width: 40px;
   height: 40px;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  background-color: rgb(8, 8, 23);
+  border: 2px solid orangered;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#hero .pagination li button:hover {
+  color: orangered;
+  background-color: rgba(255, 68, 0, 0.167);
+}
+#hero .pagination li .active-btn {
+  color: #fff !important;
+  background-color: orangered !important;
 }
 #hero .pagination li:first-child, #hero .pagination li:last-child {
   display: -webkit-box;
@@ -222,14 +235,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100px;
+  width: 40px;
   height: 40px;
-  border-radius: 4px;
-  background-color: gray;
   cursor: pointer;
-}
-
-.active-btn {
-  color: red;
-  background-color: cyan;
 }

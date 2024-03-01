@@ -4,18 +4,14 @@
         box-sizing: border-box;
     }
     
-    body{
+    
+    .mode #navbar , .mode{
         background-color: rgb(5 , 5 , 24);
         color: #fff;
-    }
-    .mode #navbar , .mode #hero{
-        background-color: rgb(5 , 5 , 24);
-        color: #fff;
-        // height: 100vh;
     }
     .mode input , .mode select , .mode .country-card{
         background-color: rgb(8, 8, 33);
-        color: #fff;
+        color: #fff !important;
         box-shadow: none;
     }
 
@@ -117,6 +113,8 @@
             .country-card{
                 cursor: pointer;
                 max-width: 400px;
+                color: rgba(8,8,23);
+                text-decoration: none;
                 width: 100%;
                 padding-bottom: 30px;
                 margin-bottom: 30px;
@@ -158,10 +156,11 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            display: flex;
+            flex-wrap: wrap;
             li{
-                background-color: gray;
-                width: 40px;
-                height: 40px;
+                // width: 40px;
+                // height: 40px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -170,22 +169,32 @@
                 button{
                     width: 40px;
                     height: 40px;
+                    border: none;
+                    border-radius: 50px;
+                    color: #fff;
+                    background-color: rgba(8,8,23);
+                    border: 2px solid orangered;
+                    transition: 0.5s;
+                    cursor: pointer;
+                    &:hover{
+                        color: orangered;
+                        background-color: rgba(255, 68, 0, 0.167);
+                    }
+                }
+                .active-btn{
+                    color: #fff !important;
+                    background-color: orangered !important;
                 }
             }
             li:first-child , li:last-child{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 100px;
+                width: 40px;
                 height: 40px;
-                border-radius: 4px;
-                background-color: gray;
                 cursor: pointer;
             }
         }
     }
 
-    .active-btn{
-        color: red;
-        background-color: cyan;
-    }
+    

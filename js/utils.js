@@ -19,4 +19,5 @@ function getData(url){
     })
 }
 
+
 // getData('ap-countries-api.vercel.app/all');
